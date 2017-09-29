@@ -48,6 +48,10 @@ UBruSaveGameManager* UJPGameInstance::GetSavedGameManager()
 }
 ```
 
+### Commit Guide
+
+Follow https://docs.unrealengine.com/latest/INT/Programming/Development/CodingStandard/ and https://github.com/Allar/ue4-style-guide
+
 ### License
 
 BSD 2-Clause License
