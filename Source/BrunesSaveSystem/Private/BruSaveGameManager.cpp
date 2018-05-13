@@ -2,7 +2,8 @@
 
 #include "BruSaveGameManager.h"
 #include "BruRootSaveGame.h"
-
+#include "Kismet/GameplayStatics.h"
+#include "GenericPlatform/GenericPlatformFile.h"
 
 UBruSaveGameManager::UBruSaveGameManager()
 {
@@ -83,7 +84,7 @@ void UBruSaveGameManager::GetAllSaveGames(TArray<FString>& OutSaves)
 {
 	OutSaves.Empty();
 
-	FString SavePath = FString::Printf(TEXT("%sSaveGames"), *FPaths::GameSavedDir());
+	FString SavePath = FString::Printf(TEXT("%sSaveGames"), *FPaths::ProjectSavedDir());
 	IPlatformFile& PlatformFile = FPlatformFileManager::Get().GetPlatformFile();
 
 	class MyDirectoryVisitor : public IPlatformFile::FDirectoryVisitor

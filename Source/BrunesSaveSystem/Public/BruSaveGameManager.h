@@ -2,8 +2,9 @@
 
 #pragma once
 
-#include "CoreMinimal.h"
+#include "Engine.h"
 #include "GameFramework/Actor.h"
+#include "UObject/NoExportTypes.h"
 #include "BruRootSaveGame.h"
 #include "BruSaveGameManager.generated.h"
 
@@ -18,7 +19,7 @@ public:
 
 	virtual void Init();
 
-	struct FWorldContext* WorldContext;
+	FWorldContext* WorldContext;
 
 	virtual UWorld* GetWorldFromContext() { return WorldContext ? WorldContext->World() : NULL; }
 public:
